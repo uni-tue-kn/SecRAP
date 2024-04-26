@@ -12,6 +12,8 @@ The repository consists of three parts:
 - ebpf-helper (License: Apache v2)
   - Contains helper functions for programming eBPF-based prototypes
 - rap (License: GPLv3)
-  - Contains a user-space RAP packet generator/receiver with the end-to-end integrity protection implementation
+  - Contains a python Python 3.10.12 user-space RAP packet generator/receiver
+  - It implemets the end-to-end integrity protection header introduced in the paper
+  
  
 

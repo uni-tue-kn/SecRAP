@@ -1,0 +1,23 @@
+[package]
+name = "rust-bpf"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[dependencies]
+aya = { git = "https://github.com/aya-rs/aya", features = ["async_tokio"] }
+aya-ebpf = { git = "https://github.com/aya-rs/aya" }
+aya-log = { git = "https://github.com/aya-rs/aya" }
+clap = { version = "4.1", features = ["derive"] }
+rust-bpf-common = { path = "../rust-bpf-common", features = ["user"] }
+anyhow = "1"
+env_logger = "0.10"
+libc = "0.2"
+log = "0.4"
+tokio = { version = "1.25", features = ["macros", "rt", "rt-multi-thread", "net", "signal"] }
+ebpf-helper = {path = "../../ebpf-helper"}
+sha256 = { git = "https://github.com/nanpuyue/sha256.git"}
+
+[[bin]]
+name = "rust-bpf"
+path = "src/main.rs"
